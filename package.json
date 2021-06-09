@@ -4,11 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app",
-    "client": "npm run start --prefix client",
-    "build": "run build",
-    "server": "nodemon app.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
