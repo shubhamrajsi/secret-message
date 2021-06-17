@@ -13,9 +13,9 @@ app.use(cors()); // to enable cors to use api
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
+// app.use(express.static(path.join(__dirname,'./client/build')));
 
-
-const mongoUrl = 'mongodb+srv://shubham:Shubh123nitu@cluster0.94nyn.mongodb.net/secret'
+const mongoUrl = ''
 
 mongoose.connect(mongoUrl,{useUnifiedTopology:true,useNewUrlParser:true},(err)=>
 {
@@ -28,6 +28,9 @@ mongoose.connect(mongoUrl,{useUnifiedTopology:true,useNewUrlParser:true},(err)=>
 
 
 //react handler
+// app.get("*", (req, res) => {
+// 	res.sendFile(path.join(__dirname, './client/build/index.html'));
+// });
 
 
 // routes

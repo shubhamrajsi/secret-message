@@ -21,10 +21,12 @@ router.post('/:id',async (req,res)=>
 })
 router.get('/messages',verifyToken, async (req,res)=>
 {
+	console.log('aaya isme')
 	
 	let user = jwt.verify(req.token, 'thefunisallaboutjwt');
 	try{
 		let results = await messageSchema.find({userId:user.new_user.id});
+		console.log(results)
 		res.send({data:results,user_id:user.new_user.id});
 	}
 	catch(err)

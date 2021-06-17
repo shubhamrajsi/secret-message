@@ -56,9 +56,13 @@ router.post('/login',async (req,res)=>
 				res.json({token:login_token})
 
 			}
+			else
+			{
+				res.send({error : 'password not matched'})
+			}
 			
 	    
-		    res.send({error : 'password not matched'})
+		    
 		})
 		
 	}
@@ -67,10 +71,6 @@ router.post('/login',async (req,res)=>
 		console.error(err)
 		res.send(err);
 	}
-})
-router.get('/',(req,res)=>
-{
-	res.send('han han han')
 })
 
 
